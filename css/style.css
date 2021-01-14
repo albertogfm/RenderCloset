@@ -5,7 +5,7 @@
 }
 
 body {
-	background: #E3E5EB;
+	background: #ECECEC;
     font-family: 'Open Sans', sans-serif;
 }
 
@@ -13,21 +13,27 @@ body {
 	padding-top: 100px;
 }
 
-.contenedor-lista {
+.contenedor-canva {
 	background: #F3F5FA;
 	border-radius: 5px;
-	width: 500px;
-	border: 2px solid black;
+	border: 2px dotted black;
+	padding: 0px;
+	height:660px;
+	width:765px;
+	padding: 3px;
 }
 
 .contenedor-e {
-
-	width: 200px;
-
+	border: 1px solid gray;
+	padding: 0px;
+	height: 700px;
+	width: 300px;
+	display:grid;
+	align-items: center;
+	overflow-x: scroll;
 }
 
 .lista {
-	padding: 5px;
 	width: 100%;
 	height:100%;
 }
@@ -36,25 +42,22 @@ body {
 
 
 
-.lista .persona {
-	background: #fff;
+.lista .elemento {
 	display: inline-table;
-	grid-template-columns: 100px 100px 100px;
-	align-items: center;
-	padding: 20px;
-	border-radius: 3px;
-	margin-bottom: 5px;
+	/* grid-template-columns: 100px 100px 100px; */
 	cursor: move;
-	height: 500px;
-	width:200px;
+	height: 645px;
+	width:250px;
 }
 
 .lista .puerta {
-	background: #833f1f;
+	background-image:url("img/Puerta.png");
+	background-color: peru;
 }
 
 .lista .rack {
-	background: #49210e;
+	background-image:url("img/Rack.png");
+	background-color: peru;
 }
 
 .lista .cajones {
@@ -67,16 +70,16 @@ body {
 
 
 /* ? Clases para los estilos en los diferentes estados del drag and drop */
-.lista .persona.seleccionado {
+.lista .elemento.seleccionado {
 	transform: scale(1.02) rotate(-1deg);
 	box-shadow: 0px 0px 20px rgba(149, 153, 159, .16);
 }
 
-.lista .persona.fantasma {
+.lista .elemento .fantasma {
 	border: 2px dotted #000;
 }
 
-.lista .persona.drag {
+.lista .elemento.drag {
 	opacity: 0;
 }
 /* ? ------- */
