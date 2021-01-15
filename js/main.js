@@ -9,7 +9,7 @@ Sortable.create(lista, {
 	dragClass: "drag",
 	direction: 'horizontal',
 	onEnd: () => {
-		console.log('Se inserto un elemento');
+		console.log("Elemento agarrado")
 	},
 	group: {
         name: 'shared',
@@ -28,7 +28,10 @@ Sortable.create(lista, {
 			const orden = localStorage.getItem(sortable.options.group.name);
 			return orden ? orden.split('|') : [];
 		}
-	}
+	},
+	
+	
+		
 	
 	
 });
@@ -41,11 +44,13 @@ Sortable.create(lista2, {
 	direction: 'horizontal',
 	removeOnSpill: true,
 	onEnd: () => {
-		console.log('Se inserto un elemento');
+		
 	},
 	group: {
         name: 'shared',
-        
+        put: function (to) {
+			return to.el.children.length < 3;
+		}
     },
 	store: {
 		// Guardamos el orden de la lista
@@ -59,7 +64,9 @@ Sortable.create(lista2, {
 			const orden = localStorage.getItem(sortable.options.group.name);
 			return orden ? orden.split('|') : [];
 		}
-	}
+	},
+	
+
 	
 	
 });
