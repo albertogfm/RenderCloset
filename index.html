@@ -10,6 +10,9 @@
 	<!-- CSS only -->
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
 	<link rel="stylesheet" href="css/style.css">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;800&display=swap" rel="stylesheet">
 	<!-- jsPDF -->
 	<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.3/jspdf.min.js"></script>
@@ -18,77 +21,96 @@
 <body>
 	<div class="container-fluid">
 		<div class="row">
-			<div class="col-8">
-				<div class="contenedor-canva">
-					<div class="lista" id="lista2">
+			<div class="col-8" >
+				<div class="contenedor-main">
+					<div class="row">
+						<div class="head">
+							<h1>¡Diseña tu closet!</h1>
+							<div class="materials">
+								<div class="material"></div>
+								<div class="material"></div>
+								<div class="material"></div>
+							</div>
+							
+						</div>
+							
 					</div>
+					<div class="row">
+						<div class="contenedor-canva">
+					
+							<div class="lista" id="lista2">
+								<div class="elemento puerta" data-id="1" id="puer">
+								
+								</div>
+							</div>
+						</div>
+					</div>
+					
 				</div>
+				
+				
 				
 			</div>
 			<div class="col-4">
-				<div class="contenedor-e">
-					<div class="lista" id="lista">
-	
-						
-						<div class="elemento puerta" data-id="1">
-						</div>
-						
-						
-						<div class="elemento rack" data-id="2">
-						</div>
-		
-						
-						<div class="elemento cajones" data-id="3">
-						</div>
-		
-						
-						<div class="elemento puerta2" data-id="4">
-						</div>
-	
-					</div>
-				</div>
 				
-				 <!-- <div id="carouselExampleControls" class="carousel carousel-dark slide" data-bs-ride="carousel">
-					<div class="carousel-inner lista" id="lista">
-					  <div class="carousel-item active ">
-						<div class="elemento puerta" data-id="1">
+				<div class="contenedor-main-e">
+					<div class="row">
+						<div class="left-head">
+							<h1>Arrastra un elemento</h1>
 						</div>
-					  </div>
-					  <div class="carousel-item">
-						<div class="elemento rack" data-id="2">
-						</div>
-					  </div>
-					  <div class="carousel-item">
-						<div class="elemento cajones" data-id="3">
-						</div>
-					  </div>
+							
 					</div>
-					<a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-bs-slide="prev">
-					  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-					  <span class="visually-hidden">Anterior</span>
-					</a>
-					<a class="carousel-control-next" href="#carouselExampleControls" role="button" data-bs-slide="next">
-					  <span class="carousel-control-next-icon" aria-hidden="true"></span>
-					  <span class="visually-hidden">Siguiente</span>
-					</a>
-				  </div> -->
+					<div class="row">
+						<div class="contenedor-e">
+							<div class="lista" id="lista">
+			
+								
+								<div class="elemento puerta" data-id="1">
+								</div>
+								
+								
+								<div class="elemento rack" data-id="2">
+								</div>
+				
+								
+								<div class="elemento cajones" data-id="3">
+								</div>
+				
+								
+								<div class="elemento puerta2" data-id="4">
+								</div>
+			
+							</div>
+						</div>
+					</div>
+					
+					
+				</div>
 			</div>
+				
 		</div>
-
+	<section class="footer">
+		<button id="print">Descargar</button>
+	</section>
 		
 		
-		<button onclick="getPDF()">GENERAR PDF</button>
 	</div>
 
 	
 	
-	<script src="js/pdfGenerator.js"></script>
+	<script src="js/printThis.js"></script>
 	<script src="https://unpkg.com/jspdf@latest/dist/jspdf.umd.min.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/sortablejs@latest/Sortable.min.js"></script>
 
 
 	<!-- JavaScript Bundle with Popper -->
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+	
 	<script src="js/main.js"></script>
+	<script>
+		$('#print').click(function(){
+			$('.contenedor-canva').printThis();
+		})
+	</script>
 </body>
 </html>
