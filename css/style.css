@@ -133,8 +133,13 @@ body {
 	/* background: #52392d; */
 }
 
-.puerta2 {
+.rack-cajon {
 	background-image: url("img/Rack\ y\ Cajones.png");
+	/* background: #ff844b; */
+}
+
+.rack-cuadrado {
+	background-image: url("img/RackCuadrado.png");
 	/* background: #ff844b; */
 }
 
@@ -155,7 +160,6 @@ body {
 /* ? ------- */
 
 .footer{
-	margin-left:6%;
 	margin-top:20px;
 }
 .footer button {
@@ -163,4 +167,10 @@ body {
 	border-radius: 10px;
 	border: 4px solid #2D2D34;
 	font-size: 24px;
+}
+
+.footer p{
+	font-size: 14px;
+	float: right;
+	text-align: center;
 }
