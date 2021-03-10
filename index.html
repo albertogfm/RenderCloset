@@ -15,11 +15,19 @@
 	<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
 	<script src="https://html2canvas.hertzen.com/dist/html2canvas.js"></script>
 	<script src="https://superal.github.io/canvas2image/canvas2image.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 <body>
+	<nav class="navbar navbar-light bg-dark">
+		<div class="container">
+		<a class="navbar-brand" href="https://grupoindusa.com/">
+			<img src="css/img/LogoIndusaV9.png" alt="" width="160" height="80">
+		</a>
+		</div>
+	</nav>
 	<div class="container-fluid">
 		<div class="row">
-			<div class="col-6" >
+			<div class="col-12 col-xl-6" >
 				<div class="contenedor-main">
 					<div class="row">
 						<div class="head">
@@ -35,7 +43,9 @@
 					</div>
 					<div class="row">
 						<div class="contenedor-canva" id="capture">
-					
+							<div class="maletero" id="con-mal">
+								<img src="css/img/Maletero.png" alt="Maletero">
+							</div>	
 							<div class="lista" id="lista2">
 							</div>
 						</div>
@@ -49,7 +59,7 @@
 				
 				
 			</div>
-			<div class="col-6">
+			<div class="col-12 col-xl-6">
 				
 				<div class="contenedor-main-e">
 					<div class="row">
@@ -84,7 +94,9 @@
 							</div>
 						</div>
 					</div>
-					
+					<div class="check-div">
+						<input type="checkbox" name="maletero" id="check-maletero" class="in-check"><span class="in-text">Maletero</span>
+					</div>
 					
 				</div>
 			</div>
@@ -105,5 +117,13 @@
 	<script src="js/main.js"></script>
 	<script src="js/canvas2image.js"></script>
 	
+	<script>
+		$('#check-maletero').on('click', function() {
+			$('#con-mal').toggle();
+			if()
+			$('.contenedor-canva').css('height', '860px');
+		});
+	</script>
+
 </body>
 </html>
