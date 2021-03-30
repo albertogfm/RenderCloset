@@ -206,7 +206,7 @@ var Canvas2Image = function () {
 	 * @return {[type]}          [description]
 	 */
 	var saveAsImage = function (canvas, width, height, type,filename) {
-		filename = 'GrupoIndusa';
+		filename = 'GrupoI	ndusa';
 		if ($support.canvas && $support.dataURL) {
 			if (typeof canvas == "string") { canvas = document.getElementById(canvas); }
 			if (type == undefined) { type = 'png'; }

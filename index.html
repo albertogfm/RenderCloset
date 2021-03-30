@@ -25,82 +25,66 @@
 		</a>
 		</div>
 	</nav>
-	<div class="container-fluid">
-		<div class="row">
-			<div class="col-12 col-xl-6" >
-				<div class="contenedor-main">
-					<div class="row">
-						<div class="head">
-							<h1>¡Diseña tu closet!</h1>
-							<div class="materials">
-								<div class="material"></div>
-								<div class="material"></div>
-								<div class="material"></div>
-							</div>
-							
-						</div>
-							
-					</div>
-					<div class="row">
-						<div class="contenedor-canva"  id="capture">
-								<div class="maletero" id="con-mal">
-									<img src="css/img/Maletero.png" alt="Maletero">
-								</div>	
-								<div class="lista" id="lista2">
-							</div>
-							
-						</div>
-					</div>
-					<section class="footer" >
-						<button id="print">Descargar</button>
-						<p>Arrastra hacia afuera <br> para eliminar</p>
-					</section>
+	<div class="main-container">
+		<div class="contenedor-left">
+			<div class="head">
+				<h1>¡Diseña tu closet!</h1>
+				<div class="materials">
+					<div class="material" id="normal"></div>
+					<div class="material" id="light"></div>
+					<div class="material" id="dark"></div>
+				</div>
+			</div>
+						
+			<div class="contenedor-canva"  id="capture">
+					<div class="maletero" id="con-mal">
+						<img src="css/img/Maletero.png" alt="Maletero">
+					</div>	
+					<div class="lista" id="lista2">
 				</div>
 				
-
 			</div>
-			<div class="col-12 col-xl-6">
-				
-				<div class="contenedor-main-e">
-					<div class="row">
-						<div class="left-head">
-							<h1>Arrastra un elemento</h1>
-						</div>
-							
-					</div>
-					<div class="row">
-						<div class="contenedor-e">
-							<div class="lista" id="lista">
-			
-								
-								<div class="elemento puerta" data-id="5">
-								</div>
-								
-								
-								<div class="elemento rack" data-id="3">
-								</div>
-				
-								
-								<div class="elemento cajones" data-id="4">
-								</div>
-				
-								
-								<div class="elemento rack-cajon" data-id="2">
-								</div>
 
-								<div class="elemento rack-cuadrado" data-id="1">
-								</div>
-			
-							</div>
-						</div>
-					</div>
-					<div class="check-div">
-						<input type="checkbox" name="maletero" id="check-maletero" class="in-check"><span class="in-text">Maletero</span>
-					</div>
+			<section class="footer" >
+				<button id="print">Descargar</button>
+				<p>Arrastra hacia afuera <br> para eliminar</p>
+			</section>
+				
+		</div>
+		<div class="contenedor-right">
+				<div class="left-head">
+					<h1>Arrastra un elemento</h1>
+				</div>
 					
+			
+				<div class="contenedor-e">
+					<div class="lista" id="lista">
+
+						<div class="elemento puerta" data-id="5">
+						</div>
+						
+						
+						<div class="elemento rack" data-id="3">
+						</div>
+		
+						
+						<div class="elemento cajones" data-id="4">
+						</div>
+		
+						
+						<div class="elemento rack-cajon" data-id="2">
+						</div>
+
+						<div class="elemento rack-cuadrado" data-id="1">
+						</div>
+	
+					</div>
 				</div>
+
+			<div class="check-div">
+				<input type="checkbox" name="maletero" id="check-maletero" class="in-check"><span class="in-text">Maletero</span>
 			</div>
-				
+			
 		</div>
 	
 		
@@ -123,6 +107,15 @@
 			// $('#capture').toggleClass('contenedor-canva contenedor-canva-largo');
 		});
 	</script>
-
+	<!-- SCRIPTS DE COLORES -->
+	<script>
+		$('#normal').click(function() {
+			$('#foo').css({
+				'background-color': 'red',
+				'color': 'white',
+				'font-size': '44px'
+			});
+		});
+	</script>
+	</html>
 </body>
-</html>
