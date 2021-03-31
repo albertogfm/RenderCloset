@@ -34,7 +34,7 @@ body {
 
 .materials {
 	float:right;
-	margin-right: 8%;
+	/* margin-right: 8%; */
 }
 
 .material {
@@ -47,21 +47,43 @@ body {
 	margin-left:20px;
 }
 
+.material-light{
+	width: 60px;
+	height: 60px;
+	background-image: url("img/WoodTextureCircle-light.png");
+	border: 3px solid #2D2D34;
+	border-radius: 60px;
+	display: inline-block;
+	margin-left:20px;
+}
+
+.material-dark{
+	width: 60px;
+	height: 60px;
+	background-image: url("img/WoodTextureCircle-dark.png");
+	border: 3px solid #2D2D34;
+	border-radius: 60px;
+	display: inline-block;
+	margin-left:20px;
+}
+
 .main-container{
 	padding-top: 20px;
-	display: inline-table;
+	display: flex;
 	width: 100%;
 }
 
 .contenedor-left {
 	display: flex;
 	flex-direction: column;
+	/* max-width: 50%; */
+	margin-left:20px;
 }
 
 .contenedor-right {
 	display: flex;
 	flex-direction: column;
-
+	max-width: 50%;
 }
 
 .contenedor-canva {
@@ -219,4 +241,16 @@ body {
 
 .maletero {
 	display: none;
+}
+
+@media only screen and (max-width: 1024px) {
+	.main-container {
+		flex-direction: column;
+	}
+	.contenedor-left {
+		max-width: 70%;
+	}
+	.contenedor-right {
+		max-width: 60%;
+	}
 }

@@ -30,15 +30,15 @@
 			<div class="head">
 				<h1>¡Diseña tu closet!</h1>
 				<div class="materials">
-					<div class="material" id="normal"></div>
-					<div class="material" id="light"></div>
-					<div class="material" id="dark"></div>
+					<div class="material" id="neutral"></div>
+					<div class="material-light" id="light"></div>
+					<div class="material-dark" id="dark"></div>
 				</div>
 			</div>
 						
 			<div class="contenedor-canva"  id="capture">
 					<div class="maletero" id="con-mal">
-						<img src="css/img/Maletero.png" alt="Maletero">
+						<img src="css/img/Maletero.png" alt="Maletero" id="maletero">
 					</div>	
 					<div class="lista" id="lista2">
 				</div>
@@ -109,12 +109,29 @@
 	</script>
 	<!-- SCRIPTS DE COLORES -->
 	<script>
-		$('#normal').click(function() {
-			$('#foo').css({
-				'background-color': 'red',
-				'color': 'white',
-				'font-size': '44px'
-			});
+		$('#light').on('click',function() {
+			$('.puerta').css("background-image", "url('css/img/Puerta-light.png')");
+			$('.rack').css("background-image", "url('css/img/RackH-light.png')");
+			$('.cajones').css("background-image", "url('css/img/PuertasCajones-light.png')");
+			$('.rack-cajon').css("background-image", "url('css/img/RackCajones-light.png')");
+			$('.rack-cuadrado').css("background-image", "url('css/img/Rack-light.png')");
+			$('#maletero').attr('src', 'css/img/Cabecera-light.png');
+		});
+		$('#dark').on('click',function() {
+			$('.puerta').css("background-image", "url('css/img/Puerta-dark.png')");
+			$('.rack').css("background-image", "url('css/img/RackH-dark.png')");
+			$('.cajones').css("background-image", "url('css/img/PuertasCajones-dark.png')");
+			$('.rack-cajon').css("background-image", "url('css/img/RackCajones-dark.png')");
+			$('.rack-cuadrado').css("background-image", "url('css/img/Rack-dark.png')");
+			$('#maletero').attr('src', 'css/img/Cabecera-dark.png');
+		});
+		$('#neutral').on('click',function() {
+			$('.puerta').css("background-image", "url('css/img/Puerta.png')");
+			$('.rack').css("background-image", "url('css/img/Rack.png')");
+			$('.cajones').css("background-image", "url('css/img/PuertaCajones.png')");
+			$('.rack-cajon').css("background-image", "url('css/img/RackCajones.png')");
+			$('.rack-cuadrado').css("background-image", "url('css/img/RackCuadrado.png')");
+			$('#maletero').attr('src', 'css/img/Maletero.png');
 		});
 	</script>
 	</html>
